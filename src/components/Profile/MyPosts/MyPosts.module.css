@@ -1,0 +1,22 @@
+.posts {
+ display:grid;
+ grid-template-areas: 
+ 'new new'
+ 'item item';
+ grid-template-columns: 1fr;
+ grid-template-rows:1fr 1fr;
+ grid-area:posts;
+}
+
+.new {
+
+ grid-area:new;
+ border: 2px solid green;
+}
+
+.item {
+ grid-area:item;
+ border: 2px solid rgb(29, 175, 29);
+ height: 100px;
+ background-color: hotpink;
+}
