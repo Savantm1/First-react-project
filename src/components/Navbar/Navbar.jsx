@@ -6,10 +6,10 @@ let Navbar = () => {
     <nav className={styles.nav}>
       <ul className={styles.list}>
         <li className={styles.item}>
-          <a className={styles.link} href="#"> Profile </a>
+          <a className={styles.link} href="/profile"> Profile </a>
         </li>
         <li className={styles.item}>
-          <a className={styles.link} href="#"> Messages </a>
+          <a className={styles.link} href="/messages"> Messages </a>
         </li>
         <li className={styles.item}>
           <a className={styles.link} href="#"> News </a>

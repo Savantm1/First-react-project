@@ -1,5 +1,5 @@
 
-.app-wrapper {
+.app_wrapper {
   display: grid;
 
   grid-template-areas:
@@ -18,3 +18,8 @@
 
 }
 
+.app_wrapper__content {
+
+  background-color: rgba(8, 120, 148, 0.244);
+  border-radius: 20px;
+}

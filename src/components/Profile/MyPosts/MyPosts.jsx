@@ -7,8 +7,8 @@ let MyPosts = () => {
     <div className={styles.posts}>
       <div >
         <p className={styles.new}>new posts</p>
-        <Post />
-        <Post />
+        <Post name="Jonny" message="Hello! It's my first message." likes="10"/>
+        <Post name="Jonny" message="I like React!" likes="666"/>
       </div>
     </div>
   )
