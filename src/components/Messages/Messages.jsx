@@ -1,10 +1,13 @@
 import React from 'react';
-import './Messages.module.css';
+import Dialogs from './Dialogs/Dialogs';
+import styles from './Messages.module.css';
+import MessageBlock from './MessageBlock/MessageBlock';
 
 const Messages = (props) => {
  return (
-  <div>
-   Dialogs
+   <div className={styles.block}>
+     <Dialogs />
+    <MessageBlock/>
    
    </div>
   )

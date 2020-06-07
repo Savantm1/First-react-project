@@ -1,0 +1,25 @@
+.block {
+ width: 20%;
+}
+
+.title {
+
+ font-size: 24px;
+ font-weight: 400;
+ color: rgb(27, 104, 68);
+ border-radius: 15px;
+ background-color: rgba(117, 180, 21, 0.458);
+ padding: 15px;
+ margin: 0 0 8px 0;
+}
+
+.list {
+
+ list-style: none;
+ height: 100vh;
+
+ background-color: rgba(117, 180, 21, 0.458);
+ border-radius: 15px;
+ margin: 0;
+ padding: 15px 5px 5px 5px;
+}

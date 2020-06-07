@@ -1,0 +1,20 @@
+.message_block{
+ display: flex;
+ flex-direction: column;
+ width:80%;
+
+}
+
+.title {
+ 
+ display: block;
+ background-color: rgba(8, 120, 148, 0.244);
+ font-size: 24px;
+ font-weight: 400;
+ color:rgb(27, 104, 68);
+ margin:0;
+ margin-left: 8px;
+ margin-bottom: 8px;
+ padding:15px;
+ border-radius: 15px;
+}

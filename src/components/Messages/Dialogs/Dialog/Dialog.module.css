@@ -1,0 +1,24 @@
+.item {
+ font-size: 24px;
+ color: rgb(28, 87, 48);
+ font-weight: 400;
+
+ position: relative;
+ padding-left: 40px;
+ margin-bottom: 30px;
+ background-color: rgb(193, 231, 214);
+ border-radius: 10px;
+}
+
+.item::before {
+position: absolute;
+content: '';
+background-color: rgb(206, 255, 108);
+width: 20px;
+height: 20px;
+left: 10px;
+top:8px;
+border-radius: 50%;
+
+
+}
