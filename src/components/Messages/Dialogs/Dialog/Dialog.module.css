@@ -1,7 +1,4 @@
 .item {
- font-size: 24px;
- color: rgb(28, 87, 48);
- font-weight: 400;
 
  position: relative;
  padding-left: 40px;
@@ -11,14 +8,27 @@
 }
 
 .item::before {
-position: absolute;
-content: '';
-background-color: rgb(206, 255, 108);
-width: 20px;
-height: 20px;
-left: 10px;
-top:8px;
-border-radius: 50%;
+ position: absolute;
+ content: '';
+ background-color: rgb(206, 255, 108);
+ width: 20px;
+ height: 20px;
+ left: 10px;
+ top: 8px;
+ border-radius: 50%;
 
+}
+
+.link {
+ font-size: 24px;
+ color: rgb(28, 87, 48);
+ font-weight: 400;
+ text-decoration: none;
+ display: block;
+
+}
+
+.active {
+color: sandybrown;
 
 }

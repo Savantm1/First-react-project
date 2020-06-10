@@ -10,7 +10,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 
 
-const App = () => {
+const App = (props) => {
+
 
   return (
     <BrowserRouter>
@@ -18,8 +19,10 @@ const App = () => {
         <Header/>
         <Navbar />
         <section className='app_wrapper__content'>
-          <Route path="/profile/" component={Profile} />
-          <Route path="/messages/" component={Messages} />
+        
+          <Route path="/profile/" render={() => {return <Profile postsData={props.postsData} />}} />
+          <Route path="/messages/" render={()=>{return  <Messages namesData={props.namesData} messagesData={props.messagesData} />}} />
+          
         </section>
       </div>
     </BrowserRouter>
