@@ -6,8 +6,9 @@ import MessageBlock from './MessageBlock/MessageBlock';
 const Messages = (props) => {
  return (
    <div className={styles.block}>
-     <Dialogs namesData={props.namesData}/>
-     <MessageBlock messagesData={props.messagesData}/>
+     
+     <Dialogs namesData={props.messagesPage.namesData}/>
+     <MessageBlock messagesData={props.messagesPage.messagesData}/>
    
    </div>
   )

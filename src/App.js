@@ -20,8 +20,8 @@ const App = (props) => {
         <Navbar />
         <section className='app_wrapper__content'>
         
-          <Route path="/profile/" render={() => {return <Profile postsData={props.postsData} />}} />
-          <Route path="/messages/" render={()=>{return  <Messages namesData={props.namesData} messagesData={props.messagesData} />}} />
+          <Route path="/profile/" render={() => {return <Profile profilePage={props.state.profilePage} />}} />
+          <Route path="/messages/" render={()=>{return  <Messages messagesPage={props.state.messagesPage} />}} />
           
         </section>
       </div>
