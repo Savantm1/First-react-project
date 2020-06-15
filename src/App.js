@@ -17,11 +17,11 @@ const App = (props) => {
     <BrowserRouter>
       <div className="app_wrapper">
         <Header/>
-        <Navbar />
+        <Navbar friendsData={props.state.Navbar.friendsData}/>
         <section className='app_wrapper__content'>
         
           <Route path="/profile/" render={() => {return <Profile profilePage={props.state.profilePage} />}} />
-          <Route path="/messages/" render={()=>{return  <Messages messagesPage={props.state.messagesPage} />}} />
+          <Route path="/messages/" render={() => {return <Messages messagesPage={props.state.messagesPage} />}} />
           
         </section>
       </div>

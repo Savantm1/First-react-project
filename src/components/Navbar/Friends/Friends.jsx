@@ -1,0 +1,20 @@
+import React from 'react';
+import styles from './Friends.module.css';
+import Friend from './Friend/Friend';
+
+
+let Friends = (props) => {
+
+ let friendsElements = props.friends.map((friendElement)=>{return(< Friend id={friendElement.id} name={friendElement.name} />)})
+
+ return (
+  <section className={styles.block}>
+   <p className={styles.title}>Friends</p>
+   <ul className={styles.list}>
+    {friendsElements}
+   </ul>
+  </section>
+ )
+}
+
+export default Friends;
