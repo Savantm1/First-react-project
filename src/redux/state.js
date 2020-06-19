@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from '../render';
+
 let state = {
   
   profilePage: {
@@ -6,11 +8,11 @@ let state = {
       { name: "Jonny", message: "Hello! It's my first message.", likes: '10' },
       { name: "Jonny", message: "I like React!", likes: '666' }
     ]
-    },
+  },
 
   messagesPage: {
     
-    namesData : [
+    namesData: [
   
       { id: '1', name: 'Margarita' },
       { id: '2', name: 'Tony' },
@@ -21,7 +23,7 @@ let state = {
     
     ],
       
-    messagesData : [
+    messagesData: [
       { name: 'Sid', text: "Hi bro! How are you ?" },
       { name: 'Me', text: "Hello dude! I'm fine. And you ?" },
       { name: 'Sid', text: "Me too. Let's go to the gym?" },
@@ -35,9 +37,9 @@ let state = {
 
     friendsData: [
 
-      { id: '1', name: 'Sid'},
-      { id: '2', name: 'Vlad'},
-      { id: '3', name: 'Dima'},
+      { id: '1', name: 'Sid' },
+      { id: '2', name: 'Vlad' },
+      { id: '3', name: 'Dima' },
       { id: '4', name: 'Margarita' }
       
     ]
@@ -45,5 +47,15 @@ let state = {
  
 }
 
+export let addPost = (postMessage) => {
+
+  let newPost = {
+    name: "Kim",
+    message: postMessage,
+    likes: '0'
+  }
+  state.profilePage.postsData.push(newPost);
+  rerenderEntireTree(state);
+};
 
 export default state;

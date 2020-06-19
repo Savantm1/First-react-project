@@ -11,7 +11,7 @@ let Profile = (props) => {
  return (
    <div className={styles.Profile_block}>
      <ProfileInfo />
-     <MyPosts postsData={props.profilePage.postsData}/>
+     <MyPosts postsData={props.profilePage.postsData} addPost={props.addPost}/>
    </div>
  )
 }
