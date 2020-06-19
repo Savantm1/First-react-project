@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from '../render';
+let rerenderEntireTree = () => {
+  console.log('change');
+}
 
 let state = {
   
@@ -7,7 +9,8 @@ let state = {
     postsData: [
       { name: "Jonny", message: "Hello! It's my first message.", likes: '10' },
       { name: "Jonny", message: "I like React!", likes: '666' }
-    ]
+    ],
+    newPostText: "text"
   },
 
   messagesPage: {
@@ -47,15 +50,22 @@ let state = {
  
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
 
   let newPost = {
     name: "Kim",
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likes: '0'
   }
   state.profilePage.postsData.push(newPost);
+  state.profilePage.newPostText = "";
   rerenderEntireTree(state);
 };
+
+export let changePostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+};
+
 
 export default state;
