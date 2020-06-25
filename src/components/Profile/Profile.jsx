@@ -7,11 +7,11 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 
 let Profile = (props) => {
-
+  debugger;
  return (
    <div className={styles.Profile_block}>
      <ProfileInfo />
-     <MyPosts postsData={props.profilePage.postsData} dispatch={props.dispatch}/>
+     <MyPosts store={props.store}/>
    </div>
  )
 }

@@ -1,6 +1,5 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-// CONST UPDATE_NEW_MESSAGE_
+import profileReducer from "./profileReducer";
+import messagesReducer from "./messagesReducer";
 
 
 
@@ -64,31 +63,16 @@ let store = {
   },
   
   dispatch(action) {
-    if (action.type === ADD_POST) {
-      let newPost = {
-        name: "Jonny",
-        message: this._state.profilePage.newPostText,
-        likes: '0'
-      };
-      this._state.profilePage.postsData.push(newPost);
-      this._state.profilePage.newPostText = "";
-      this._callSubscriber(this._state);
 
-    } else if (action.type === UPDATE_NEW_POST_TEXT) {
-      
-      this._state.profilePage.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    }
-      
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
+    
+    this._callSubscriber(this._state);
+
   } 
 }
-export const addPostActionCreator = () => {
-  return {type: ADD_POST}
-}
 
-export const updateNewPostTextActionCreator = (text) => {
-  return {type: UPDATE_NEW_POST_TEXT, newText : text}
-}
+
+
 export default store;
 window.store = store;
-

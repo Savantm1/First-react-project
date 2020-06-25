@@ -20,8 +20,8 @@ const App = (props) => {
       <Navbar friendsData={props.state.Navbar.friendsData}/>
         <section className='app_wrapper__content'>
         
-        <Route path="/profile/" render={() => { return <Profile profilePage={props.state.profilePage} dispatch={props.dispatch}/>}} />
-        <Route path="/messages/" render={() => {return <Messages messagesPage={props.state.messagesPage} />}} />
+        <Route path="/profile/" render={() => { return <Profile store={props.store}/>}} />
+        <Route path="/messages/" render={() => {return <Messages store={props.store} />}} />
           
         </section>
       </div>

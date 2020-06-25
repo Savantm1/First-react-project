@@ -7,8 +7,9 @@ import Dialog from './Dialog/Dialog';
 
 const Dialogs = (props) => {
 
-  
-  let namesElement = props.namesData.map(element => { return (<Dialog name={element.name} id={element.id} />) })
+  debugger;
+  let state = props.store.getState().messagesPage.namesData;
+  let namesElement = state.map(element => { return (<Dialog name={element.name} id={element.id} />) })
 
  return (
    <div className={styles.block}>
