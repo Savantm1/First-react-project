@@ -1,6 +1,6 @@
 import profileReducer from "./profileReducer";
 import messagesReducer from "./messagesReducer";
-
+import navbarReducer from "./navbarReducer";
 
 
 let store = {
@@ -66,7 +66,7 @@ let store = {
 
     this._state.profilePage = profileReducer(this._state.profilePage, action);
     this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
-    
+    this._state.navbar = navbarReducer(this._state.Navbar, action);
     this._callSubscriber(this._state);
 
   } 
