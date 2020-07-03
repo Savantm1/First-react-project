@@ -14,7 +14,7 @@ const Dialogs = (props) => {
   return (
     <StoreContext.Consumer>
       {store => {
-        let state = store.getState().messagesPage.namesData;
+        let state = props.namesData;
         let namesElement = state.map(element => { return (<Dialog name={element.name} id={element.id} />) })
         return (
           <div className={styles.block}>

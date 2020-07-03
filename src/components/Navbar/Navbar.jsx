@@ -1,14 +1,11 @@
 import React from 'react';
 import styles from "./Navbar.module.css";
 import { NavLink } from 'react-router-dom';
-import Friends from './Friends/Friends';
-import StoreContext from '../../StoreContext';
+import FriendsContainer from './Friends/FriendsContainer';
+
 
 let Navbar = (props) => {
   return (
-    <StoreContext.Consumer>
-      {store => {
-        return (
           <nav className={styles.nav}>
           <ul className={styles.list}>
             <li className={styles.item}>
@@ -27,16 +24,9 @@ let Navbar = (props) => {
               <NavLink className={styles.link} activeClassName={styles.active} to="/settings"> Settings </NavLink>
             </li>
           </ul>
-          <Friends friends={store.getState().Navbar.friendsData} />
+          <FriendsContainer />
         </nav>
-        )
-
-        }
-      }
-    </StoreContext.Consumer>
-
   )
-
 }
 
 export default Navbar;

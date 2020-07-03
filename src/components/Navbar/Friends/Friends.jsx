@@ -4,8 +4,8 @@ import Friend from './Friend/Friend';
 
 
 let Friends = (props) => {
-
- let friendsElements = props.friends.map((friendElement)=>{return(< Friend id={friendElement.id} name={friendElement.name} />)})
+ debugger;
+ let friendsElements = props.friendsData.map((friendElement)=>{return(<Friend id={friendElement.id} name={friendElement.name} />)})
 
  return (
   <section className={styles.block}>
