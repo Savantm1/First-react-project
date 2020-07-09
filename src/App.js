@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import Messages from './components/Messages/Messages';
 import { Route } from 'react-router-dom';
+import UsersContainer from './components/Users/UsersContainer';
 
 
 
@@ -21,7 +22,8 @@ const App = (props) => {
         <section className='app_wrapper__content'>
         
         <Route path="/profile/" render={() => { return <Profile />}} />
-        <Route path="/messages/" render={() => {return <Messages />}} />
+        <Route path="/messages/" render={() => { return <Messages /> }} />
+        <Route path="/users/" render={() => {return <UsersContainer/> }} />
           
         </section>
       </div>

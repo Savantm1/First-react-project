@@ -1,0 +1,61 @@
+.block{
+ border: 1px solid red;
+ display:flex;
+ padding: 10px;
+ margin-bottom:10px;
+ border-radius: 15px;
+ background-color: rgba(81, 177, 201, 0.244);
+}
+
+.left_side {
+ display: flex;
+ flex-direction: column;
+}
+
+.avatar {
+ width: 100px;
+ border-radius: 50%;
+}
+
+.btn {
+ background-color: rgba(8, 120, 148, 0.544);
+ border:none;
+ margin-top: 15px;
+ padding: 5px;
+ font-size: 17px;
+ text-transform: uppercase;
+ font-weight: 600;
+ border-radius: 5px;
+}
+.btn:hover {
+ background-color: rgba(8, 120, 148, 0.244);
+}
+
+.right_side {
+ margin-left: 30px;
+ width: 100%;
+ display:flex;
+ flex-wrap: wrap;
+ font-size: 24px;
+ color:  rgb(8, 120, 148);
+}
+
+.name {
+ width:80%;
+
+ 
+}
+
+.place_block {
+ display: flex;
+ flex-direction: column;
+ text-align: right;
+ width:19%;
+}
+
+.status {
+ background-color: #fff;
+ padding: 10px;
+ width:100%;
+ border-radius: 10px;
+}
