@@ -2,11 +2,12 @@ import React from 'react';
 import styles from './User.module.css';
 
 let User = (props) => {
+ debugger
  return (
   <div className={styles.block}>
    <div className={styles.left_side}>
     <img className={styles.avatar} src={props.avatar} alt="avatar" />
-    <button className={styles.btn}>{props.btnText} onClick={props.onClick}</button>
+    <button onClick={props.onClick} className={styles.btn}>{props.btnText} </button>
    </div>
    <div className={styles.right_side}>
     <span className={styles.name}>{props.name}</span>
