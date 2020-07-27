@@ -15,3 +15,33 @@
     padding: 15px;
     margin: 0 0 8px 0;
 }
+
+.paginator {
+    list-style: none;
+    display: flex;
+    padding: 0;
+
+
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(27, 104, 68);
+
+    margin: 0 0 8px 0;
+}
+
+.item {
+    cursor: pointer;
+    background-color: rgba(117, 180, 21, 0.658);
+    padding: 15px;
+    border-radius: 15px;
+    margin-right: 8px;
+}
+
+.item__active {
+    cursor: pointer;
+    color: rgba(117, 180, 21, 0.658);
+    background-color:rgb(27, 104, 68);
+    padding: 15px;
+    border-radius: 15px;
+    margin-right: 8px;
+}
