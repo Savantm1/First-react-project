@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import * as axios from "axios";
 import Users from './Users';
 import React from 'react';
-import preloader from "../../assets/images/preload.gif"
+import Preloader from "../../common/Preloader/Preloader";
 
 
 class UsersAPIComponent extends React.Component {
@@ -11,14 +11,14 @@ class UsersAPIComponent extends React.Component {
   componentDidMount() {
     this.props.toggleIsFetching(true);
     axios.get(`https://social-network.samuraijs.com/api/1.0/users/?count=${this.props.pageSize}&page=${this.props.currentPage}`).then(Response => {
-      this.props.toggleIsFetching(false);
+    this.props.toggleIsFetching(false);
     this.props.setUsers(Response.data.items);
     this.props.setTotalUsersCount(Response.data.totalCount);
   })
   };
 
   
-  
+
 
   onPageChanged = (pageNumber)=> {
       this.props.toggleIsFetching(true)
@@ -33,7 +33,7 @@ class UsersAPIComponent extends React.Component {
   render() {
 
     return (<>
-      {this.props.isFetching ? <img src={preloader} /> : null}
+      {this.props.isFetching ? <Preloader/>: null}
       <Users
       onPageChanged={this.onPageChanged}
       pageSize={this.props.pageSize}
