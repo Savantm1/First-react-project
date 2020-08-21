@@ -1,5 +1,5 @@
 
-import { updateNewMessageBodyCreator, sendMessageCreator } from '../../../redux/messagesReducer';
+import { updateNewMessageBody, sendMessage} from '../../../redux/messagesReducer';
 import MessageBlock from './MessageBlock';
 import { connect } from 'react-redux';
 
@@ -12,16 +12,16 @@ let mapStateToProps = (state) => {
   }
 }
 
-let mapDispatchToProps = (dispatch) => {
-  return {
-    addMessage  : () => {
-      dispatch(sendMessageCreator())
-    },
-    onMessageChange : (body) => { 
-      dispatch(updateNewMessageBodyCreator(body))
-    }
-  }
-}
-const MessageBlockContainer = connect(mapStateToProps,mapDispatchToProps)(MessageBlock);
+// let mapDispatchToProps = (dispatch) => {
+//   return {
+//     addMessage  : () => {
+//       dispatch(sendMessageCreator())
+//     },
+//     onMessageChange : (body) => { 
+//       dispatch(updateNewMessageBodyCreator(body))
+//     }
+//   }
+// }
+const MessageBlockContainer = connect(mapStateToProps,{sendMessage,updateNewMessageBody})(MessageBlock);
 
 export default MessageBlockContainer;

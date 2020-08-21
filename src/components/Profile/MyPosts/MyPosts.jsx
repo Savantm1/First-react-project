@@ -10,11 +10,11 @@ let MyPosts = (props) => {
   let newPostElement = React.createRef(); // создаем ссылку на новый элдемент
 
 // добавляем новый пост
-  let newPost = () => {
+  // let newPost = () => {
     
-  props.newPost();
+  // props.addPost();
 
-  }
+  // }
 // вносим изменения в пост
   let onPostChange = () => {
     let text = newPostElement.current.value;
@@ -28,7 +28,7 @@ let MyPosts = (props) => {
       <div>
         <div className={styles.new}>
           <textarea ref={newPostElement} value={props.newPostText} onChange={onPostChange} className={styles.text}/>
-          <button onClick={newPost}  className={styles.btn}>Add post</button>
+          <button onClick={props.addPost}  className={styles.btn}>Add post</button>
         </div>
        
         { PostsElements }

@@ -8,13 +8,13 @@ const MessageBlock = (props) => {
 
 
  let addMessage = () => {
-  props.addMessage();
+  props.sendMessage();
  }
  
  let onMessageChange = (evt) => {
   
   let body = evt.target.value;
-  props.onMessageChange(body);
+  props.updateNewMessageBody(body);
  }
 
  let messagesElement = props.messagesData.map((element) => { return (<Message name={element.name} text={element.text} />) });
@@ -26,7 +26,7 @@ const MessageBlock = (props) => {
    {messagesElement}
    <div className={styles.newMessage}>
     <textarea  onChange={onMessageChange} value ={newMessageBody} className={styles.text}></textarea>
-    <button onClick={ addMessage} className={styles.btn}>send message</button>
+    <button onClick={addMessage} className={styles.btn}>send message</button>
    </div>
   </div>
  )
