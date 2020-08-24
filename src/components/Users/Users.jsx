@@ -15,7 +15,7 @@ let Users = (props) => {
  name={element.name}
  county={'element.country'}
  city={'element.city'}
- btnText={element.followed ? "Follow" : "Unfollow"} onClick={element.followed ? () => { props.unfollow(element.id) } : () => { props.follow(element.id) }} />)
+    btnText={element.followed ? "Follow" : "Unfollow"} onClick={element.followed ? () => { props.unfollow(element.id) } : () => { props.follow(element.id) }} />)
 })
   
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);

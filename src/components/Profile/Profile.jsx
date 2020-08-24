@@ -2,15 +2,20 @@ import React from 'react';
 import styles from "./Profile.module.css";
 import MyPostsContainer from './MyPosts/MyPostsContainer';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
+import Preloader from '../../common/Preloader/Preloader';
 
 
 
 
 let Profile = (props) => {
+
+  if (!props.profile) {
+    return <Preloader/>
+  }
   debugger;
  return (
    <div className={styles.Profile_block}>
-     <ProfileInfo />
+     <ProfileInfo profile={props.profile}/>
      <MyPostsContainer />
    </div>
  )

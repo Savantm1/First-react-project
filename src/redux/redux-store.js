@@ -11,6 +11,10 @@ let reducers = combineReducers({
  Navbar: navbarReducer,
  UsersPage: usersReducer
 }) 
+
+
 let store = createStore(reducers);
 
+
+window.store = store;
 export default store;
