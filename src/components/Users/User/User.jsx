@@ -7,7 +7,7 @@ let User = (props) => {
  return (
        <div className={styles.block}>
        <div className={styles.left_side}>
-   <NavLink to="/profile/">
+   <NavLink to={"/profile/" + props.id}>
       <img className={styles.avatar} src={props.avatar} alt="avatar" />
    </NavLink>
       <button onClick={props.onClick} className={styles.btn}>{props.btnText} </button>
