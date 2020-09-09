@@ -15,7 +15,7 @@ let User = (props) => {
      <div className={styles.right_side}>
       <span className={styles.name}>{props.name}</span>
       <div className={styles.place_block}>
-       <span className={styles.country}>{props.county}</span>
+       <span className={styles.country}>{props.county }</span>
        <span className={styles.city}>{props.city}</span>
       </div>
       <span className={styles.status}>{props.status}</span>
