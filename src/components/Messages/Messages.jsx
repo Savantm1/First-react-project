@@ -4,7 +4,7 @@ import MessageBlockContainer from './MessageBlock/MessageBlockContainer';
 import DialogsContainer from './Dialogs/DialogsContainer';
 
 const Messages = (props) => {
-  debugger;
+
 
 
  return (

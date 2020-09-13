@@ -1,8 +1,8 @@
 const SET_USER_DATA = "SET_USER_DATA";
 
 let initialState = {
-  email: null,
   id: null,
+  email: null,
   login: null,
   isAuth:false
 }
@@ -25,10 +25,10 @@ const authReducer = (state = initialState, action)=>{
 
 }
 
-export const setAuthUserData = (email, id, login)=>{
+export const setAuthUserData = (id, email, login)=>{
  return {
   type: SET_USER_DATA,
-  data: [email,id,login]
+   data: { id, email, login }
 
  }
 }

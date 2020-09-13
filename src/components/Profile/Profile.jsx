@@ -12,7 +12,7 @@ let Profile = (props) => {
   if (!props.profile) {
     return <Preloader/>
   }
-  debugger;
+
  return (
    <div className={styles.Profile_block}>
      <ProfileInfo profile={props.profile}/>

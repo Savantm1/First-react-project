@@ -19,12 +19,12 @@ const App = (props) => {
   return (
       <div className="app_wrapper">
         <HeaderContainer/>
-      <Navbar />
+        <Navbar />
         <section className='app_wrapper__content'>
         
-        <Route path="/profile/:userId?" render={() => { return <ProfileContainer />}} />
-        <Route path="/messages" render={() => { return <Messages /> }} />
-        <Route path="/users" render={() => {return <UsersContainer/> }} />
+          <Route path="/profile/:userId?" render={() => { return <ProfileContainer />}} />
+          <Route path="/messages" render={() => { return <Messages /> }} />
+          <Route path="/users" render={() => {return <UsersContainer/> }} />
           
         </section>
       </div>

@@ -5,7 +5,7 @@ import Post from './Post/Post';
 
 
 let MyPosts = (props) => {
-  debugger;
+
   
   let newPostElement = React.createRef(); // создаем ссылку на новый элдемент
 
@@ -20,7 +20,7 @@ let MyPosts = (props) => {
     let text = newPostElement.current.value;
     props.onPostChange(text);
   }
-  debugger;
+
   let PostsElements = props.postsData.map(element => < Post name={element.name} message={element.message} likes={element.likes} />);
   
   return (

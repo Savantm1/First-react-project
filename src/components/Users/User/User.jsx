@@ -3,7 +3,7 @@ import styles from './User.module.css';
 import { NavLink } from 'react-router-dom';
 
 let User = (props) => {
- debugger
+
  return (
        <div className={styles.block}>
        <div className={styles.left_side}>

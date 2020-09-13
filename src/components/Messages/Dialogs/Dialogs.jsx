@@ -8,7 +8,6 @@ import StoreContext from '../../../StoreContext';
 
 const Dialogs = (props) => {
 
-  debugger;
   
 
   return (
