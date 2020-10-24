@@ -10,6 +10,7 @@ let mapStateToProps = (state) => {
   }
 }
 
+
 // let mapDispatchToProps = (dispatch) => {
 //   return {
 //     onPostChange : (text) => {

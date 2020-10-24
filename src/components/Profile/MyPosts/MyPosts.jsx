@@ -5,7 +5,7 @@ import Post from './Post/Post';
 
 
 let MyPosts = (props) => {
-
+  debugger;
   
   let newPostElement = React.createRef(); // создаем ссылку на новый элдемент
 

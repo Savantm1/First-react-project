@@ -14,7 +14,6 @@ import HeaderContainer from './components/Header/HeaderContainer';
 
 
 const App = (props) => {
-  debugger;
 
   return (
       <div className="app_wrapper">
